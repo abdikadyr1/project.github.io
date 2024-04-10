@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>TENGRINEWS</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet"> 
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="static/slick/slick.css" rel="stylesheet">
+        <link href="static/slick/slick-theme.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="static/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Top Bar Start -->
+        <!-- Top Bar Start -->
+        
+        <!-- Brand Start -->
+        <div class="brand">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="b-logo">
+                            <a href="main.html">
+                                <h2> <span class="text-success">TENGRI</span>NEWS </h2>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4">
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <div class="b-search">
+                            <input type="text" placeholder="Search">
+                            <button><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Brand End -->
+
+        <!-- Nav Bar Start -->
+        <div class="nav-bar">
+            <div class="container">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                    <a href="#" class="navbar-brand">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            
+                            <a href="single-page.html" class="nav-item nav-link">Articles</a>
+                            
+                        </div>
+                        <div class="social ml-auto">
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+
+        <!-- Top News Start-->
+        
+        <div class="top-news">
+            <div class="container">
+                <div class="row">{% for article in articles[:1] %}
+                    
+                                <div class="tn-img">
+                                    <img src="{{ article.image }}" />
+                                    <div class="tn-title">
+                                        <a href="">{{ article.title }}</a>
+                                    </div>
+                                </div>
+                    </div>{% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Top News End-->
+        <div> <p> </p> </div>
+        <!-- Category News Start-->
+        <div class="cat-news">
+            <div class="container">
+                <h2>Tengri Sports</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        
+                        <div class="row cn-slider">{% for article in sports[:3] %}
+                            <div class="col-md-6 col-lg-4">
+                                <div class="cn-img">
+                                    
+                                    <img src="{{article.image}}" />
+                                    <div class="cn-title">
+                                        <a href="{{article.link}}">{{article.title}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Category News End-->
+        <div class="cat-news">
+            <div class="container">
+                <h2>Tengri Travel</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        
+                        <div class="row cn-slider">{% for article in travels[:3] %}
+                            <div class="col-md-6 col-lg-4">
+                                <div class="cn-img">
+                                    
+                                    <img src="{{article.image}}" />
+                                    <div class="cn-title">
+                                        <a href="{{article.link}}">{{article.title}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Category News Start-->
+        <div class="cat-news">
+            <div class="container">
+                <h2>Tengri Education</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        
+                        <div class="row cn-slider">{% for article in edus[:3] %}
+                            <div class="col-md-6 col-lg-4">
+                                <div class="cn-img">
+                                    
+                                    <img src="{{article.image}}" />
+                                    <div class="cn-title">
+                                        <a href="{{article.link}}">{{article.title}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Category News End-->
+        
+        <!-- Tab News Start-->
+        
+        <!-- Tab News Start-->
+
+        <!-- Main News Start-->
+        <div class="main-news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        
+                        <div class="row">{% for article in articles %}
+                            <div class="col-md-4">
+                                <div class="mn-img">
+
+                                    <img src="{{article.image}}" />
+                                    <div class="mn-title">
+                                        <a href="{{article.link}}">{{article.title}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="mn-list">
+                            <h2>Read More</h2>
+                            {% for topics in articles %}
+                            <ul>
+                                <li><a href="topics.link">{{topics.title}}</a></li>
+                            </ul>
+                            {% endfor %}
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main News End-->
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Footer Menu Start -->
+        
+        <!-- Footer Menu End -->
+
+        <!-- Footer Bottom Start -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 copyright">
+                        <p>Copyright &copy; <a href=""> <span class="text-success">TENGRI</span>NEWS</a>. All Rights Reserved</p>
+                    </div>
+
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    <div class="col-md-6 template-by">
+                        <p>Project for <span class="text-danger">Nfactorial Incubator 2024</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
